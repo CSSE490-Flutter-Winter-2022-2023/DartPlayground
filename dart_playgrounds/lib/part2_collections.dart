@@ -1,7 +1,7 @@
 void main() {
   print("Collections");
-  lists();
-  sets();
+  // lists();
+  // sets();
   maps();
 }
 
@@ -47,6 +47,26 @@ void lists() {
   });
 }
 
-void sets() {}
+void sets() {
+  final setOfInts = <int>{};
+  final Set<int> set2 = {};
+  final set3 = {3, 4, 5, 6, 67};
+  // set3 = {66, 55};  // Won't compile since the set is final (set once)
+  print("$setOfInts, $set2, $set3");
 
-void maps() {}
+  print("Before: $set3");
+  set3.add(17);
+  set3.add(5);
+  print("After: $set3");
+}
+
+void maps() {
+  final mapOfInts = <String, int>{};
+  final map2 = {"Dave": 43, "McKinley": 12};
+
+  map2["Bob"] = 46;
+  print("$mapOfInts $map2");
+
+  print('${map2["Dave"]}');
+  print('${map2["Bob"]}');
+}
