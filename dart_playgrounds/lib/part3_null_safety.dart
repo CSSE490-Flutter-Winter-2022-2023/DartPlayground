@@ -22,9 +22,9 @@ void main() {
   ElevatedButton? button;
   button = ElevatedButton(onPressed: null, child: null);
   if (5 > 6) {
-    // Text? txt = const Text("Hello World!");
+    Text? txt = const Text("Hello World!");
     // Text? txt = const Text(null);
-    txt = null;
+    // txt = null;
     button = ElevatedButton(onPressed: null, child: txt);
   } else {
     button = null;
