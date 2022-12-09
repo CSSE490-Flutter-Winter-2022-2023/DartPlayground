@@ -9,6 +9,9 @@ void main() {
   // If they are positional...
   var pt = DoublePoint(2, 5);
   print("pt = ${pt.x} ${pt.y}  $pt");
+
+  var emptyPt = DoublePoint.empty();
+  print("emptyPt = ${emptyPt.x} ${emptyPt.y}  $emptyPt");
 }
 
 // Class DoublePoint
@@ -84,8 +87,8 @@ void main() {
 // }
 
 class DoublePoint {
-  double x;
-  double y;
+  late double x;
+  late double y;
 
   // Most common, just assign it!
   // DoublePoint({required this.x, required this.y});
@@ -96,6 +99,11 @@ class DoublePoint {
       : this.x = 2.0 * x,
         this.y = 2.0 * y {
     print("you made a point");
+  }
+
+  DoublePoint.empty() {
+    this.x = 0;
+    this.y = 0;
   }
 
   @override
